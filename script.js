@@ -1,22 +1,47 @@
 const hamburger = document.querySelector('.fa-bars');
 const sidebar = document.querySelector('.nav-main');
 const container = document.querySelector('.container');
+const removeSidebar = document.querySelector('.fa-times');
 
-hamburger.addEventListener('click', () => {
+const toggleSidebar = () => {
     sidebar.classList.toggle('show-sidebar');
     if (!sidebar.classList.contains('show-sidebar')) {
-        hamburger.style.marginLeft = '0';
-        container.style.marginLeft = '0';
+        removeMargin();
     } else {
-        hamburger.style.marginLeft = '200px';
-        container.style.marginLeft = '220px';
+        hamburger.style.marginLeft = '180px';
+        container.style.marginLeft = '185px';
     }
+};
+
+hamburger.addEventListener('click', () => {
+    toggleSidebar();
+});
+
+removeSidebar.addEventListener('click', () => {
+    sidebar.classList.remove('show-sidebar');
+    removeMargin();
 });
 
 document.addEventListener('click', (event) => {
     if (!sidebar.contains(event.target) && hamburger !== event.target) {
-        sidebar.classList.remove('show-sidebar');
-        hamburger.style.marginLeft = '0';
-        container.style.marginLeft = '0';
+        toggleSidebar();
     }
 });
+
+const mediaQuery = window.matchMedia('(min-width: 769px)');
+
+const handleMediaQueryChange = (event) => {
+    if (event.matches) {
+        sidebar.classList.remove('show-sidebar');
+        removeMargin();
+    }
+};
+
+const removeMargin = () => {
+    hamburger.style.marginLeft = '0';
+    container.style.marginLeft = '0';
+}
+
+mediaQuery.addEventListener('change', handleMediaQueryChange);
+
+handleMediaQueryChange(mediaQuery);
