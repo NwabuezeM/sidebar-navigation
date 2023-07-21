@@ -8,7 +8,7 @@ hamburger.addEventListener('click', () => {
         hamburger.style.marginLeft = '0';
         container.style.marginLeft = '0';
     } else {
-        hamburger.style.marginLeft = '220px';
+        hamburger.style.marginLeft = '200px';
         container.style.marginLeft = '220px';
     }
 });
