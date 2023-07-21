@@ -133,7 +133,6 @@ nav {
     }
 
     .container {
-        transition: 0.3s linear;
         padding-left: 10px;
     }
     .hero {
@@ -147,8 +146,8 @@ body {
 }
 
     .nav-main {
-        padding-left: 3px;
-        width: 50%;
+        padding-left: 8px;
+        width: 65%;
     }
 
     .nav-header {
@@ -162,7 +161,6 @@ body {
         position: fixed;
         top: 0.6rem;
         left: 1rem;
-        transition: 0.3s linear;
         cursor: pointer;
     }
 }
