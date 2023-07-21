@@ -120,29 +120,3 @@ nav {
         font-size: 15pt;
     }
 }
-
-@media only screen and (max-width: 600px) {
-    .nav-main {
-        display: block;
-        height: fit-content;
-        width: 1000%;
-        background-color: gray;
-        border-right: none;
-        transition: 0.3s linear;
-        transform: translate(-100%);
-    }
-
-    .show-sidebar {
-        transform: translate(0);
-    }
-
-    .fa-bars {
-        display: block;
-        width: fit-content;
-        position: fixed;
-        top: 0.6rem;
-        right: 3rem;
-        transition: 0.3s linear;
-        cursor: pointer;
-    }
-}
