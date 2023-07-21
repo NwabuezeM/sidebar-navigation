@@ -3,12 +3,8 @@ const sidebar = document.querySelector('.nav-main');
 const container = document.querySelector('.container');
 const removeSidebar = document.querySelector('.fa-times');
 
-const toggleSidebar = () => {
-    sidebar.classList.add('show-sidebar');
-};
-
 hamburger.addEventListener('click', () => {
-    toggleSidebar();
+    sidebar.classList.add('show-sidebar');
 });
 
 removeSidebar.addEventListener('click', () => {
@@ -17,7 +13,7 @@ removeSidebar.addEventListener('click', () => {
 
 document.addEventListener('click', (event) => {
     if (!sidebar.contains(event.target) && hamburger !== event.target) {
-        toggleSidebar();
+        sidebar.classList.remove('show-sidebar');
     }
 });
 
