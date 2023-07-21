@@ -28,6 +28,19 @@ nav {
     padding: 0 2rem;
 }
 
+.fa-times {
+    color: tomato;
+    font-size: 24pt;
+    position: relative;
+    left: 9%;
+    cursor: pointer;
+    display: none;
+}
+
+.fa-times:hover {
+    color: yellow;
+}
+
 .fa-bars {
     color: tomato;
     font-size: 16pt;
@@ -69,6 +82,10 @@ nav {
     nav {
         height: 60px;
         padding: 0;
+    }
+
+    .fa-times {
+        display: block;
     }
     
     .fa-bars {
@@ -131,6 +148,13 @@ body {
 
     .nav-main {
         padding-left: 3px;
+        width: 50%;
+    }
+
+    .nav-header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
     }
 
     .fa-bars {
